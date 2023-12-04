@@ -29,7 +29,7 @@ warnings.filterwarnings("ignore")
 findspark.init()
 findspark.find()
 
-conf = pyspark.SparkConf().setAppName('winequality').setMaster('local')
+conf = pyspark.SparkConf().setAppName('CS 643 Programming Assignment 2: Prediction').setMaster('local')
 sc = pyspark.SparkContext(conf=conf)
 spark = SparkSession(sc)
 
@@ -78,7 +78,7 @@ print("---------------Output-----------------")
 print("Accuracy : ", accuracy_score(quality_prediction_df['quality'], quality_prediction_df['prediction']))
 print("F1- score : ", f1_score(quality_prediction_df['quality'], quality_prediction_df['prediction'], average='weighted'))
 
-test_error = predic_rdd.filter(
+test_error = prediction_rdd.filter(
     lambda y: y[0] != y[1]).count() / float(model_test.count())
 print('Test Error : ' + str(test_error))
 
