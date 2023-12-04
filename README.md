@@ -1,6 +1,4 @@
 # CS 643 Programming Assignment 2
-See the in-depth guide for the assignment at: 
-##
 
 ## Goal: 
 The purpose of this individual assignment is to learn how to develop parallel machine learning (ML)
