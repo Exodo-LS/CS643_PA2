@@ -16,4 +16,4 @@ RUN . ~/.bash_profile
 COPY --chown=myuser1:myuser1 . .
 RUN pip3 install -r requirements.txt
 ENTRYPOINT ["runuser", "-u", "myuser1", "--", "python3"]
-CMD ["model_training.py"]
+CMD ["model_prediction.py"]
