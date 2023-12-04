@@ -1,6 +1,0 @@
-pyspark
-numpy
-sklearn
-scikit-learn
-pandas
-findspark
