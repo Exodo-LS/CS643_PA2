@@ -29,7 +29,7 @@ warnings.filterwarnings("ignore")
 findspark.init()
 findspark.find()
 
-conf = pyspark.SparkConf().setAppName('winequality').setMaster('local')
+conf = pyspark.SparkConf().setAppName('CS 643 Programming Assignment 2: Prediction').setMaster('local')
 sc = pyspark.SparkContext(conf=conf)
 spark = SparkSession(sc)
 
@@ -58,7 +58,7 @@ def to_rdd(sc, labeled_points):
 
 data_lable_point = to_labeled_point(features, label)
 
-data_label_point_rdd = to_rdd(sc, data_lp)
+data_label_point_rdd = to_rdd(sc, data_lable_point)
 
 RF = RandomForestModel.load(sc, "/home/hadoop/wine_quality/")
 
